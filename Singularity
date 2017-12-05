@@ -18,3 +18,9 @@ mkdir -p /opt/software
 mkdir -p /mnt/home/schmaelz
 mkdir -p /mnt/veiled
  
+chmod -R a+rX /usr/local/miniconda
+chmod +x /usr/local/miniconda/bin/*
+
+%runscript
+  exec /usr/local/miniconda/bin/fmriprep "$@"
+
